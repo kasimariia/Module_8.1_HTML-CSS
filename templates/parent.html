@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+    {% block head %}
+    <link rel="stylesheet" href="s{{ url_for('static', filename='style.css') }}">
+    {% endblock %}
+</head>
+<body>
+    <h1>Welcome to my home page!</h1>
+    <img src="{{url_for('static',filename='ladies-learning-to-code.jpg')}}" />
+    <div id="content">{% block content %}{% endblock %}</div>
+</body>
+</html>
